@@ -24,6 +24,7 @@
     --white: #ffffff;
     --pink: #FF006B;
     --green: #00c853;
+    --green-2: #00fca1;
 }
 html {
     scroll-behavior: smooth;
@@ -34,9 +35,9 @@ html {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(to bottom, #ff006b, #000),
+    /*background: linear-gradient(to bottom, #ff006b, #000),
     linear-gradient(to top,  #ff006b, #000); /* Cor principal de fundo */
-    
+    background: #000;
     z-index: -1;
   }
 
@@ -358,7 +359,7 @@ header {
 
 /* Topo verde */
 .top-section {
-    background: #00c853;
+    background: var(--green-2);
     padding: 20px;
     text-align: center;
     font-size: 20px;
@@ -400,7 +401,8 @@ header {
     left: 0;
     width: 100%;
     height: 40px;
-    background: linear-gradient(to right, #00c853, #00e676);
+    background: var(--green-2);
+    /*background: linear-gradient(to right, #00c853, #00e676);*/
     transform: skewY(130deg);
     z-index: 99;
 }
@@ -631,7 +633,7 @@ header {
     text-decoration: none;
   }
   .midias a:nth-child(2) {
-    background-color: #00c853;
+    background-color: var(--green-2);
     padding: 30px;
   }
   footer a:nth-child(2) {
