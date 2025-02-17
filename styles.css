@@ -26,6 +26,9 @@ body {
     background: linear-gradient(115deg, #000, green);
     color: var(--white);
 }
+a {
+    text-decoration: none;
+}
 .btn {
     background-color: green;
     padding: 20px;
@@ -34,6 +37,7 @@ body {
     font-weight: 700;
     box-shadow: var(--white) 0 4px 10px;
 }
+
 header {
     background-color: var(--red);
     color: var(--white); 
@@ -51,7 +55,7 @@ header {
     flex-direction: column;
     justify-content: space-around;
     gap: 2rem;
-    padding: 40px;
+    padding: 10px;
 
 }
 .hero-text h1 {
@@ -70,7 +74,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 40px;
+    padding: 10px;
 }
 .hero-img img {
     width: 650px;
@@ -89,7 +93,16 @@ header {
     color: var(--white);
     font-weight: 700;
 }
-
+.card-credit {
+    display: flex;
+    gap: 1rem;
+    padding: 20px;
+}
+.card-credit img {
+    background-color: white;
+    width: 100px;
+    border-radius: 12px;
+}
 
 .apresent {
     display: flex;
@@ -177,6 +190,7 @@ header {
     gap: 2rem;
     font-size: 20px;
 }
+
 .mentor-text h3, .mentor-text h2 {
     font-size: 33px;
 }
@@ -271,6 +285,9 @@ header {
     gap: 2rem;
     padding: 30px;
 }
+.promisse-text h2 {
+    width: 100%;
+}
 .promisse-box {
     background-color: #000;
     padding: 30px;
@@ -337,6 +354,7 @@ header {
     z-index: 2;
     text-align: right;
     margin-left: 500px;
+    margin-top: -150px;
 
 }
 .bonus p {
@@ -423,6 +441,9 @@ header {
     width: 100%;
     font-size: 28px;
     
+}
+.oferta-info strong {
+    font-size: 4.2rem;
 }
 
 .oferta-info span {
@@ -574,6 +595,20 @@ header {
     background-color: #00c853;
     padding: 30px;
   }
+  footer a:nth-child(2) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    gap: 10px;
+    width: 100%;
+   
+}
+footer a:nth-child(2) img {
+    width: 20px;
+    fill: white;
+    filter: invert(1)
+}
 
   @media  screen and (min-width: 360px) and (max-width: 450px) {
     body{
@@ -626,6 +661,20 @@ header {
         min-width: 300px;
         max-width: 400px;
         width: 100%;
+    }
+    .card-credit {
+        max-width: 450px;
+        width: 100%;
+        display: flex;
+        gap: 1rem;
+        padding: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+    .card-credit img {
+        background-color: white;
+        width: 85px;
+        border-radius: 12px;
     }
 
     .apresent {
@@ -705,12 +754,18 @@ header {
         display: flex;
         flex-direction: column;
         width:  100%;
+
     
     }
     .box-2-box {
       font-weight: 600;  
+      display: flex;
+      align-items: center;
     }
-
+    .promisse-text h2 {
+        width: 100%;
+        font-size: 2.5rem;
+    }
     .promisse-box {
         max-width: 450px;
         min-width: 360px;
@@ -732,15 +787,33 @@ header {
         text-align: center;
     }
     .divider {
-        margin:  10px auto;
+        margin:  5px auto;
         transform: skewY(170deg);
         
     }
    
     .bonus {
         margin-left: 0;
+        margin-top: 80px;
     }
+    .oferta-box  {
+        display: flex;
+        align-items: center;    
+    }
+    .oferta-info {
+        display: flex;
+        align-items: center;
+    }
+    .oferta-info p:nth-child(1) {
 
+        font-size: 1.3rem;
+        width: 100%;
+    }
+    .oferta-info span {
+        color: red;
+        font-size: 2rem;
+        width: 100%;
+    }
     .ofertas {
         display: flex;
         flex-direction: column;
@@ -787,6 +860,7 @@ header {
         flex-direction: column;
         align-items: center;
     }
+    
     footer {
         display: flex;
         flex-direction: column;
@@ -795,6 +869,21 @@ header {
         max-width: 450px;
         min-width: 360px;
         width: 100%;
+    }
+    footer a:nth-child(2) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        gap: 2px;
+        width: 100%;
+        margin: 0;
+        max-width: 450px;
+    }
+    footer a:nth-child(2) img {
+        width: 20px;
+        fill: white;
+        filter: invert(1)
     }
     .midias {
         display: flex;
