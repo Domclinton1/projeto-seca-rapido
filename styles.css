@@ -20,6 +20,8 @@
     
 }
 :root {
+    --black-1: #000;
+    --black-2: #141414;
     --red: red;
     --white: #ffffff;
     --pink: #FF006B;
@@ -37,7 +39,7 @@ html {
     height: 100vh;
     /*background: linear-gradient(to bottom, #ff006b, #000),
     linear-gradient(to top,  #ff006b, #000); /* Cor principal de fundo */
-    background: #000;
+    background: var(--black-2);
     z-index: -1;
   }
 
@@ -307,9 +309,10 @@ header {
 .promisse {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 2.5rem;
     justify-content: center;
     align-items: center;
+    padding: 15px;
 }
 .promisse-text {
     font-size: 25px;
@@ -328,6 +331,10 @@ header {
     width: 50%;
     display: flex;
     gap: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 2.5px #fff, /* Brilho branco */
+    0 0 15px 5px #ff006b; /* Brilho rosa */
+    transition: box-shadow 0.3s ease-in-out;
 
 }
 .promisse-box-text {
@@ -363,8 +370,9 @@ header {
     padding: 20px;
     text-align: center;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 500;
     z-index: 99;
+    color: #000;
 }
 
 /* Layout das caixas pretas com divisão diagonal */
@@ -409,12 +417,12 @@ header {
 
 /* Estilização do texto */
 .highlight-green {
-    color: #00c853;
+    color: var(--green-2);
     font-weight: bold;
 }
 
 .highlight-blue {
-    color: #00e676;
+    color: var(--green-2);
     font-weight: bold;
 }
 
@@ -453,6 +461,7 @@ header {
     flex: 1;
     align-items: center;
     justify-content: center;
+    gap: 2rem;
 }
 .ofertas-container:nth-child(1) p{
     color: var(--pink);
@@ -502,7 +511,10 @@ header {
     background-color: #000;
     border-radius: 25px;
     padding: 40px;
-   
+    box-shadow: 0 0 20px 5px #fff, /* Brilho branco */
+    0 0 30px 10px #ff006b; /* Brilho rosa */
+    transition: box-shadow 0.3s ease-in-out;
+    margin: 25px 0;
     
 }
 .oferta-box:nth-child(2) {
