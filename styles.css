@@ -1,14 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@keyframes balanco {
+    0% {
+      transform: rotate(-5deg);
+    }
+    50% {
+      transform: rotate(5deg);
+    }
+    100% {
+      transform: rotate(-5deg);
+    }
+  }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', serif;
 }
 :root {
     --red: red;
     --white: #ffffff;
+    --pink: #FF006B;
+}
+html {
+    scroll-behavior: smooth;
 }
 .background {
     position: fixed;
@@ -16,26 +32,34 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1)), 
-                linear-gradient(-45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1));
-    background-size: 200px 200px;
+    background: linear-gradient(to bottom, #ff006b, #000),
+    linear-gradient(to top,  #ff006b, #000); /* Cor principal de fundo */
+    
     z-index: -1;
   }
 
 body {
     background: linear-gradient(115deg, #000, green);
     color: var(--white);
+    font-family: 'Montserrat', serif;
 }
 a {
     text-decoration: none;
+    text-align: center;
 }
 .btn {
-    background-color: green;
+    background-color: var(--pink);
     padding: 20px;
     border-radius: 30px;
     color: black;
     font-weight: 700;
-    box-shadow: var(--white) 0 4px 10px;
+    box-shadow: 0 0 20px 5px #fff, /* Brilho branco */
+    0 0 30px 10px #ff006b; /* Brilho rosa */
+    transition: box-shadow 0.3s ease-in-out;
+}
+.btn:hover {
+    animation: balanco 0.5s ease-in-out infinite;
+    box-shadow: 0px -8px 15px #fff;
 }
 
 header {
@@ -49,6 +73,7 @@ header {
 }
 .hero {
     display: flex;
+    
 }
 .hero-text {
     display: flex;
@@ -56,10 +81,12 @@ header {
     justify-content: space-around;
     gap: 2rem;
     padding: 10px;
-
+    position: relative;
+  
 }
 .hero-text h1 {
     font-size: 52px;
+    font-family: 'Dancing Script', serif;
 }
 .hero-text h2 {
     font-size: 42px;
@@ -68,7 +95,8 @@ header {
     font-size: 32px;
 }
 .hero-text span {
-    color: var(--red);
+    color: var(--pink);
+    text-shadow: 2px 2px 2px #000;
 }
 .hero-img {
     display: flex;
@@ -79,6 +107,8 @@ header {
 .hero-img img {
     width: 650px;
     border-radius: 75px;
+    box-shadow: 0 0 20px 5px #fff, /* Brilho branco */
+    0 0 30px 10px #ff006b; /* Brilho rosa */
 }
 .hero-cta {
     display: flex;
@@ -87,7 +117,7 @@ header {
     justify-content: center;
 }
 .hero-cta .btn {
-    background-color: green;
+    background-color: var(--pink);
     padding: 20px;
     border-radius: 30px;
     color: var(--white);
@@ -135,7 +165,7 @@ header {
 .apresent-text .btn {
     font-size: 20px;
     border-radius: 30px;
-    background-color: red;
+    background-color: var(--pink);
     padding: 15px;
     
 }
@@ -180,8 +210,8 @@ header {
 .mentor-img img {
     width: 600px;
     backdrop-filter: blur(10px); /* Efeito de desfoque no fundo */
-    box-shadow: 0 0 20px 5px rgba(0, 255, 0, 0.6), /* Brilho verde */
-    0 0 30px 10px rgba(255, 255, 255, 0.5); /* Brilho branco */
+    box-shadow: 0 0 20px 5px #fff, /* Brilho branco */
+    0 0 30px 10px #ff006b; /* Brilho rosa */
     border-radius: 50%;
 }
 .mentor-text {
@@ -215,7 +245,7 @@ header {
     width: 50%;
 }
 .box-1 h3 {
-    background-color: green;
+    background-color: var(--pink);
     width: 100%;
     font-size: 30px;
     padding: 40px;
@@ -569,7 +599,7 @@ header {
   .last-cta .btn {
     color: var(--white);
     text-decoration: none;
-    background-color: red;
+    background-color: var(--pink);
   }
   
 
