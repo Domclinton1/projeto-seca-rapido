@@ -564,12 +564,14 @@ header {
     width: 300px;
     border-radius: 20px;
     font-size: 20px;
+    text-align: center;
   }
   .last-cta .btn {
     color: var(--white);
     text-decoration: none;
+    background-color: red;
   }
-
+  
 
   footer{
     background-color: #000;
@@ -971,5 +973,7 @@ footer a:nth-child(2) img {
         width: 100%;
         align-items: stretch;
         justify-content: center;
+        
     }
+
   }
