@@ -17,11 +17,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', serif;
+    
 }
 :root {
     --red: red;
     --white: #ffffff;
     --pink: #FF006B;
+    --green: #00c853;
 }
 html {
     scroll-behavior: smooth;
@@ -87,6 +89,7 @@ header {
 .hero-text h1 {
     font-size: 52px;
     font-family: 'Dancing Script', serif;
+    text-shadow: 4px 4px 4px var(--pink);
 }
 .hero-text h2 {
     font-size: 42px;
@@ -450,7 +453,7 @@ header {
     justify-content: center;
 }
 .ofertas-container:nth-child(1) p{
-    color: green;
+    color: var(--pink);
     font-size: 28px;
     font-weight: 700;
     width: 78%;
@@ -474,6 +477,9 @@ header {
 }
 .oferta-info strong {
     font-size: 4.2rem;
+    color: var(--pink);
+    text-shadow: 2px 2px 2px #000;
+    
 }
 
 .oferta-info span {
@@ -518,7 +524,7 @@ header {
   }
 
   .faq-container  h1 {
-    color: #00ff88;
+    color: var(--white);
     text-align: center;
     margin-bottom: 20px;
   }
@@ -535,7 +541,7 @@ header {
     cursor: pointer;
     padding: 15px 20px;
     background-color: #1f1f1f;
-    color: #00ff88;
+    color: var(--white);
     font-weight: bold;
     display: flex;
     justify-content: space-between;
@@ -581,6 +587,7 @@ header {
   }
   .last-cta h2 {
     font-size: 40px;
+    text-align: center;
   }
   .last-cta-container {
     display: flex;
