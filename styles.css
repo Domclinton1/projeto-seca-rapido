@@ -892,3 +892,84 @@ footer a:nth-child(2) img {
         flex-direction: column;
     }
   }
+  @media screen and (min-width: 451px) and (max-width: 768px) {
+    header {
+        max-width: 768px;
+        width: 100%;
+    }
+    .hero {
+        max-width: 768px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .apresent-content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .mentor {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .boxes {
+        display: flex;
+    }
+    .box-2 {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 20px;
+        height: 1000px;
+    }
+    .box-2-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .promisse-box {
+        
+        width: 90%;
+    }
+    .container {
+        max-width: 768px;
+        width: 100%;
+    }
+    .top-section {
+        max-width: 768px;
+        width: 100%;
+        font-size: 1rem;
+        text-align: center;
+    }
+    .divider {
+        margin:  5px auto;
+        transform: skewY(170deg);
+        
+    }
+   
+    .bonus {
+        margin-left: 0;
+        margin-top: 100px;
+    }
+    .ofertas {
+        max-width: 768px;
+        width: 100%;
+        flex-direction: column;
+    }
+    .oferta-info span {
+        color: red;
+        font-size: 2.5rem;
+        width: 100%;
+    }
+    .garantia {
+        max-width: 768px;
+        width: 100%;
+        flex-direction: column;
+    }
+    .last-cta-container {
+        max-width: 768px;
+        width: 100%;
+        align-items: stretch;
+        justify-content: center;
+    }
+  }
