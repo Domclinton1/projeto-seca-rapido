@@ -396,7 +396,7 @@ header {
     z-index: 2;
     text-align: right;
     margin-left: 500px;
-    margin-top: -150px;
+    margin-top: -50px;
 
 }
 .bonus p {
@@ -647,6 +647,8 @@ header {
   .midias a:nth-child(2) {
     background-color: var(--green-2);
     padding: 30px;
+    font-size: 15px;
+    font-weight: 700;
   }
   footer a:nth-child(2) {
     display: flex;
