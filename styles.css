@@ -77,6 +77,96 @@ header {
     padding: 20px;
     clip-path: polygon(0 0, 100% 0, 100% 65%, 50% 100%, 0 65%);
 }
+
+.carousel {
+    width: 100%;
+    max-width: 600px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #FF006B;
+    color: white;
+    padding: 20px;
+    display: flex;
+}
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Ajuste conforme necessário */
+    margin: auto;
+    overflow: hidden;
+}
+
+.review-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    white-space: nowrap;
+}
+
+.review {
+    flex: 0 0 100%; /* Garante que cada review ocupa 100% da largura */
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    text-align: left;
+}
+
+.review p {
+    font-size: 2rem;
+}
+.review-info {
+    display: flex;
+    font-size: 20px;
+    gap: 1.2rem;
+}
+
+.review-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    
+}
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#prevBtn {
+    left: 10px;
+}
+
+#nextBtn {
+    right: 10px;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+
+
 .hero {
     display: flex;
     
@@ -91,8 +181,8 @@ header {
   
 }
 .hero-text h1 {
-    font-size: 52px;
-    font-family: 'Dancing Script', serif;
+    font-size: 90px;
+    font-family: 'Montserrat', serif;
     text-shadow: 4px 4px 4px var(--pink);
 }
 .hero-text h2 {

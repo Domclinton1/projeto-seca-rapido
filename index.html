@@ -36,7 +36,30 @@
             <h1>Projeto Seca Rápido</h1>
 
             <h2>Queime até <span>10kgs</span> de gordura em <span>30 dias</span>, com o projeto Seca Rápido e elimine até <span>3kgs</span> na primeira semana!</h2>
-            <p>Seja aluna de quem já transformou a vida de centenas de pessoas e tenha os resultados que você busca a tanto tempo!</p>
+            <div class="carousel-container">
+                <button id="prevBtn" class="nav-btn">&#10094;</button> <!-- Botão Anterior -->
+                <div class="carousel">
+                    <div class="review-wrapper" id="reviewWrapper">
+                        <div class="review">
+                            <img src="./assets/images/antes-e-depois-1.jpeg" alt="Foto de Antes e depois de alunas do projeto seca rapido" class="profile-img">
+                        </div>
+                        <div class="review">
+                            <img src="./assets/images/antes-e-depois-2.jpeg" alt="Foto de Antes e depois de alunas do projeto seca rapido" class="profile-img">
+                        </div>
+                        <div class="review">
+                            <img src="./assets/images/antes-e-depois-3.jpeg" alt="Foto de Antes e depois de alunas do projeto seca rapido" class="profile-img">
+                        </div>
+                        <div class="review">
+                            <img src="./assets/images/antes-e-depois-4.jpeg" alt="Foto de Antes e depois de alunas do projeto seca rapido" class="profile-img">
+                        </div>
+                        <div class="review">
+                            <img src="./assets/images/antes-e-depois-5.jpeg" alt="Foto de Antes e depois de alunas do projeto seca rapido" class="profile-img">
+                        </div>
+                        
+                    </div>  
+                </div>
+                <button id="nextBtn" class="nav-btn">&#10095;</button> <!-- Botão Próximo -->
+            </div>
             <div class="hero-cta">
                 <a href="#seq-2"  class="btn">SIM! QUERO ESSA TRANSFORMAÇÃO EM 30 DIAS!</a>
                 <div class="card-credit">
@@ -374,6 +397,57 @@
             }
           });
         });
+
+
+        const reviewWrapper = document.getElementById("reviewWrapper");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+
+let index = 0;
+let reviewWidth = document.querySelector(".review").offsetWidth;
+const totalReviews = document.querySelectorAll(".review").length;
+
+// Função para atualizar a posição do carrossel
+function updateCarousel() {
+    reviewWrapper.style.transform = `translateX(${-index * reviewWidth}px)`;
+}
+
+// Atualiza a largura ao redimensionar a tela
+window.addEventListener("resize", () => {
+    reviewWidth = document.querySelector(".review").offsetWidth;
+    updateCarousel();
+});
+
+// Botão "Próximo"
+nextBtn.addEventListener("click", () => {
+    if (index < totalReviews - 1) {
+        index++;
+    } else {
+        index = 0; // Volta ao início
+    }
+    updateCarousel();
+});
+
+// Botão "Anterior"
+prevBtn.addEventListener("click", () => {
+    if (index > 0) {
+        index--;
+    } else {
+        index = totalReviews - 1; // Volta ao último
+    }
+    updateCarousel();
+});
+
+// Scroll automático a cada 5 segundos
+setInterval(() => {
+    if (index < totalReviews - 1) {
+        index++;
+    } else {
+        index = 0;
+    }
+    updateCarousel();
+}, 5000);
+
       </script>
 </body>
 </html>
